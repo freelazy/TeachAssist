@@ -46,10 +46,10 @@ namespace TeachAssist.Winform.Forms
             // 
             // avatarBox
             // 
-            this.avatarBox.Location = new System.Drawing.Point(37, 47);
+            this.avatarBox.Location = new System.Drawing.Point(73, 65);
             this.avatarBox.Margin = new System.Windows.Forms.Padding(4);
             this.avatarBox.Name = "avatarBox";
-            this.avatarBox.Size = new System.Drawing.Size(232, 236);
+            this.avatarBox.Size = new System.Drawing.Size(190, 221);
             this.avatarBox.TabIndex = 2;
             this.avatarBox.TabStop = false;
             // 
@@ -57,7 +57,8 @@ namespace TeachAssist.Winform.Forms
             // 
             this.stname.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.stname.Font = new System.Drawing.Font("宋体", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.stname.BackColor = System.Drawing.Color.Transparent;
+            this.stname.Font = new System.Drawing.Font("宋体", 65F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.stname.ForeColor = System.Drawing.Color.Red;
             this.stname.Location = new System.Drawing.Point(269, 65);
             this.stname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -71,6 +72,7 @@ namespace TeachAssist.Winform.Forms
             // refreshBt
             // 
             this.refreshBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refreshBt.BackColor = System.Drawing.Color.Transparent;
             this.refreshBt.Image = global::TeachAssist.Winform.Properties.Resources.Refresh;
             this.refreshBt.Location = new System.Drawing.Point(855, 2);
             this.refreshBt.Margin = new System.Windows.Forms.Padding(2);

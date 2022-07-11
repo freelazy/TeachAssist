@@ -72,14 +72,14 @@ namespace TeachAssist.Winform.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox.Location = new System.Drawing.Point(20, 16);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(783, 449);
+            this.groupBox.Size = new System.Drawing.Size(788, 479);
             this.groupBox.TabIndex = 1;
             // 
             // btNew
             // 
-            this.btNew.Location = new System.Drawing.Point(-2, 52);
+            this.btNew.Location = new System.Drawing.Point(0, 52);
             this.btNew.Name = "btNew";
-            this.btNew.Size = new System.Drawing.Size(159, 47);
+            this.btNew.Size = new System.Drawing.Size(157, 47);
             this.btNew.TabIndex = 4;
             this.btNew.Text = "添加新组";
             this.btNew.UseVisualStyleBackColor = true;

@@ -94,7 +94,7 @@ namespace TeachAssist.Winform
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.splitContainer1.Size = new System.Drawing.Size(1078, 713);
-            this.splitContainer1.SplitterDistance = 150;
+            this.splitContainer1.SplitterDistance = 160;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
             // 
@@ -107,7 +107,7 @@ namespace TeachAssist.Winform
             this.menuBox.MinimumSize = new System.Drawing.Size(80, 30);
             this.menuBox.Name = "menuBox";
             this.menuBox.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.menuBox.Size = new System.Drawing.Size(145, 703);
+            this.menuBox.Size = new System.Drawing.Size(155, 703);
             this.menuBox.TabIndex = 0;
             // 
             // MainForm

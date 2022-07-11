@@ -85,8 +85,8 @@ namespace TeachAssist.Winform.Forms
             var groupPanel = new MyFlowLayoutPanel
             {
                 BackColor = Color.White,
-                MinimumSize = new Size(145, 40),
-                MaximumSize = new Size(145, 200),
+                MinimumSize = new Size(180, 40),
+                MaximumSize = new Size(200, 250),
                 Padding = new Padding(9, 6, 3, 6),
                 Margin = new Padding(5, 5, 5, 5),
                 AutoSize = true,
