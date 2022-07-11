@@ -8,6 +8,7 @@ create table students
   id varchar(50) primary key,
   name nvarchar(50) not null,
   homecity nvarchar(50),
+  telephone varchar(20),
   state int default 1,
   tiwen_cishu int default 0,  -- 冗余
   tiwen_fenshu int default 0, -- 冗余
@@ -30,8 +31,8 @@ create table parameters
   category varchar(200) not null default 'misc',
   type int not null default 1
 );
-insert into parameters (name, value) values ('defaultMenuIndex', '0');
-insert into parameters (name, value) values ('autoRollInterval', '3500');
+insert into parameters (name, value) values ('defaultMenuIndex', '1');
+insert into parameters (name, value) values ('autoRollInterval', '2000');
 insert into parameters (name, value) values ('avatarDir', 'E:/Workdir/avatars/');
 
 
