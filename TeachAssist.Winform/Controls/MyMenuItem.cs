@@ -41,7 +41,7 @@ namespace TeachAssist.Winform.Controls
 
         private void MyMenuItem_Load(object sender, EventArgs e)
         {
-            this.Height = 40;
+            this.Height = 30;
 
             label1.Text = Text;
             pictureBox1.Image = Image;

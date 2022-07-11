@@ -48,31 +48,31 @@ namespace TeachAssist.Winform
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 517);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 713);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 11, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(820, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(1078, 31);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(36, 20);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(43, 24);
             this.toolStripStatusLabel1.Text = " 👊 ";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Margin = new System.Windows.Forms.Padding(20, 4, 0, 3);
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 19);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(0, 24);
             // 
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.AutoSize = false;
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(82, 20);
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(120, 24);
             this.toolStripStatusLabel3.Text = "南方IT学院";
             // 
             // splitContainer1
@@ -93,7 +93,7 @@ namespace TeachAssist.Winform
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.splitContainer1.Size = new System.Drawing.Size(820, 517);
+            this.splitContainer1.Size = new System.Drawing.Size(1078, 713);
             this.splitContainer1.SplitterDistance = 150;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
@@ -107,13 +107,13 @@ namespace TeachAssist.Winform
             this.menuBox.MinimumSize = new System.Drawing.Size(80, 30);
             this.menuBox.Name = "menuBox";
             this.menuBox.Padding = new System.Windows.Forms.Padding(0, 20, 10, 0);
-            this.menuBox.Size = new System.Drawing.Size(145, 507);
+            this.menuBox.Size = new System.Drawing.Size(145, 703);
             this.menuBox.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(820, 543);
+            this.ClientSize = new System.Drawing.Size(1078, 744);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.IsMdiContainer = true;

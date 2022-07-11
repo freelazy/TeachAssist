@@ -81,6 +81,7 @@ namespace TeachAssist.Winform.Forms
             var button = new Button()
             {
                 Text = student.Name,
+                AutoSize = true,
                 FlatStyle = FlatStyle.Flat,
                 Margin = new Padding(5, 5, 5, 2),
                 BackColor = student.State == 1 ? defColor : lockColor,

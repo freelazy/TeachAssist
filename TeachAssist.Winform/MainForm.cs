@@ -61,6 +61,7 @@ namespace TeachAssist.Winform
 
         void InitMenus()
         {
+            this.menuBox.MenuItemHeight = 50;
             foreach (var menu in menus.OrderBy(m => m.no))
             {
                 var item = new MyMenuItem

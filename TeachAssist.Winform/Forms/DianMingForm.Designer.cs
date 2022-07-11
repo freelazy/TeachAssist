@@ -46,10 +46,10 @@ namespace TeachAssist.Winform.Forms
             // 
             // avatarBox
             // 
-            this.avatarBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.avatarBox.Location = new System.Drawing.Point(39, 62);
+            this.avatarBox.Location = new System.Drawing.Point(37, 47);
+            this.avatarBox.Margin = new System.Windows.Forms.Padding(4);
             this.avatarBox.Name = "avatarBox";
-            this.avatarBox.Size = new System.Drawing.Size(190, 197);
+            this.avatarBox.Size = new System.Drawing.Size(232, 236);
             this.avatarBox.TabIndex = 2;
             this.avatarBox.TabStop = false;
             // 
@@ -59,11 +59,11 @@ namespace TeachAssist.Winform.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.stname.Font = new System.Drawing.Font("宋体", 70F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.stname.ForeColor = System.Drawing.Color.Red;
-            this.stname.Location = new System.Drawing.Point(229, 77);
+            this.stname.Location = new System.Drawing.Point(269, 65);
             this.stname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.stname.Name = "stname";
-            this.stname.Padding = new System.Windows.Forms.Padding(5);
-            this.stname.Size = new System.Drawing.Size(507, 134);
+            this.stname.Padding = new System.Windows.Forms.Padding(6);
+            this.stname.Size = new System.Drawing.Size(620, 161);
             this.stname.TabIndex = 3;
             this.stname.Text = "Ready?";
             this.stname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,10 +72,10 @@ namespace TeachAssist.Winform.Forms
             // 
             this.refreshBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.refreshBt.Image = global::TeachAssist.Winform.Properties.Resources.Refresh;
-            this.refreshBt.Location = new System.Drawing.Point(710, 2);
+            this.refreshBt.Location = new System.Drawing.Point(855, 2);
             this.refreshBt.Margin = new System.Windows.Forms.Padding(2);
             this.refreshBt.Name = "refreshBt";
-            this.refreshBt.Size = new System.Drawing.Size(14, 16);
+            this.refreshBt.Size = new System.Drawing.Size(17, 19);
             this.refreshBt.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.refreshBt.TabIndex = 19;
             this.refreshBt.TabStop = false;
@@ -83,18 +83,20 @@ namespace TeachAssist.Winform.Forms
             // 
             // btNext
             // 
-            this.btNext.Location = new System.Drawing.Point(235, 3);
+            this.btNext.Location = new System.Drawing.Point(287, 4);
+            this.btNext.Margin = new System.Windows.Forms.Padding(4);
             this.btNext.Name = "btNext";
-            this.btNext.Size = new System.Drawing.Size(100, 35);
+            this.btNext.Size = new System.Drawing.Size(122, 42);
             this.btNext.TabIndex = 20;
             this.btNext.Text = "点  名";
             this.btNext.UseVisualStyleBackColor = true;
             // 
             // btCurr
             // 
-            this.btCurr.Location = new System.Drawing.Point(119, 3);
+            this.btCurr.Location = new System.Drawing.Point(145, 4);
+            this.btCurr.Margin = new System.Windows.Forms.Padding(4);
             this.btCurr.Name = "btCurr";
-            this.btCurr.Size = new System.Drawing.Size(100, 35);
+            this.btCurr.Size = new System.Drawing.Size(122, 42);
             this.btCurr.TabIndex = 21;
             this.btCurr.Text = "呼  叫";
             this.btCurr.UseVisualStyleBackColor = true;
@@ -107,9 +109,10 @@ namespace TeachAssist.Winform.Forms
             this.btAuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAuto.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btAuto.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btAuto.Location = new System.Drawing.Point(5, 3);
+            this.btAuto.Location = new System.Drawing.Point(6, 4);
+            this.btAuto.Margin = new System.Windows.Forms.Padding(4);
             this.btAuto.Name = "btAuto";
-            this.btAuto.Size = new System.Drawing.Size(100, 35);
+            this.btAuto.Size = new System.Drawing.Size(122, 42);
             this.btAuto.TabIndex = 22;
             this.btAuto.Text = "自动模式";
             this.btAuto.UseVisualStyleBackColor = false;
@@ -120,45 +123,47 @@ namespace TeachAssist.Winform.Forms
             this.panel1.Controls.Add(this.btAuto);
             this.panel1.Controls.Add(this.btNext);
             this.panel1.Controls.Add(this.btCurr);
-            this.panel1.Location = new System.Drawing.Point(401, 474);
+            this.panel1.Location = new System.Drawing.Point(500, 571);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 43);
+            this.panel1.Size = new System.Drawing.Size(413, 52);
             this.panel1.TabIndex = 23;
             // 
             // mingdan
             // 
+            this.mingdan.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.mingdan.BackColor = System.Drawing.SystemColors.ControlLight;
             this.mingdan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mingdan.Location = new System.Drawing.Point(0, 0);
             this.mingdan.Margin = new System.Windows.Forms.Padding(0);
             this.mingdan.Name = "mingdan";
             this.mingdan.Padding = new System.Windows.Forms.Padding(2);
-            this.mingdan.Size = new System.Drawing.Size(727, 204);
+            this.mingdan.Size = new System.Drawing.Size(876, 200);
             this.mingdan.TabIndex = 24;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.refreshBt);
             this.panel2.Controls.Add(this.mingdan);
-            this.panel2.Location = new System.Drawing.Point(12, 265);
+            this.panel2.Location = new System.Drawing.Point(28, 332);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 204);
+            this.panel2.Size = new System.Drawing.Size(876, 200);
             this.panel2.TabIndex = 25;
             // 
             // DianMingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(763, 528);
+            this.ClientSize = new System.Drawing.Size(933, 634);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.avatarBox);
             this.Controls.Add(this.stname);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DianMingForm";
             this.Text = "点名";
             ((System.ComponentModel.ISupportInitialize)(this.avatarBox)).EndInit();
@@ -166,7 +171,6 @@ namespace TeachAssist.Winform.Forms
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

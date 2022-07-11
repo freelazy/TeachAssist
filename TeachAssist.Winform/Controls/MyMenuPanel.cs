@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace TeachAssist.Winform.Controls
@@ -10,7 +11,14 @@ namespace TeachAssist.Winform.Controls
             this.MinimumSize = new Size(60, 30);
         }
 
+        [Browsable(true)]
+        [Category("我的菜单")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int Gap { get; set; } = 5;
+
+        [Browsable(true)]
+        [Category("我的菜单")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public int MenuItemHeight { get; set; } = 30;
 
         protected override void OnLayout(LayoutEventArgs levent)

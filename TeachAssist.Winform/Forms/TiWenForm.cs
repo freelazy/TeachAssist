@@ -54,8 +54,8 @@ namespace TeachAssist.Winform.Forms
             dvStudents.Columns[3].HeaderText = "次";
             dvStudents.Columns[4].HeaderText = "分";
             dvStudents.RowHeadersWidth = 20;
-            dvStudents.RowTemplate.Height = 20;
-            dvStudents.ColumnHeadersHeight = 20;
+            //dvStudents.RowTemplate.Height = 20;
+            //dvStudents.ColumnHeadersHeight = 20;
             dvStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvStudents.BackgroundColor = Color.White;
             dvStudents.BorderStyle = BorderStyle.FixedSingle;
@@ -67,8 +67,8 @@ namespace TeachAssist.Winform.Forms
 
             dvGroups.Visible = false;
             dvGroups.RowHeadersWidth = 20;
-            dvGroups.RowTemplate.Height = 20;
-            dvGroups.ColumnHeadersHeight = 20;
+            //dvGroups.RowTemplate.Height = 20;
+            //dvGroups.ColumnHeadersHeight = 20;
             dvGroups.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvGroups.BackgroundColor = Color.White;
             dvGroups.BorderStyle = BorderStyle.FixedSingle;
@@ -167,7 +167,6 @@ namespace TeachAssist.Winform.Forms
                 var img = File.Exists(avatar) ? new Bitmap(avatar) : Properties.Resources.NoAvatar;
                 this.pbAvatar.Image = img;
                 this.pbAvatar.SizeMode = PictureBoxSizeMode.Zoom;
-                this.pbAvatar.BackColor = Color.White;
             }
 
             foreach (Label c in this.fpList.Controls)
