@@ -84,10 +84,10 @@ namespace TeachAssist.Winform.Forms
             {
                 var cells = dvStudents.SelectedRows[0].Cells;
                 tbId.Text = cells[0].Value.ToString();
-                tbName.Text = cells[1].Value.ToString();
-                tbHc.Text = cells[2].Value.ToString();
-                tbTel.Text = cells[3].Value.ToString();
-                tbState.Text = cells[4].Value.ToString();
+                tbName.Text = Convert.ToString(cells[1].Value);
+                tbHc.Text = Convert.ToString(cells[2].Value);
+                tbTel.Text = Convert.ToString(cells[3].Value);
+                tbState.Text = Convert.ToString(cells[4].Value);
 
                 tbId.ReadOnly = true;
                 tbName.ReadOnly = true;
