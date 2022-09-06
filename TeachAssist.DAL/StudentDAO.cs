@@ -12,7 +12,7 @@ namespace TeachAssist.DAL
         {
             using var connection = DbHelper.GetConnection();
 
-            var sql = "select id, name, homecity, telephone, state from students";
+            var sql = "select id, name, homecity, telephone, state, duyin from students";
 
             var command = new SqlCommand() { Connection = connection };
 
@@ -36,7 +36,8 @@ namespace TeachAssist.DAL
                     Name = reader["name"] as string,
                     Homecity = reader[2] as string,
                     Telephone = reader[3] as string,
-                    State = (int)reader[4]
+                    State = (int)reader[4],
+                    Duyin = reader[5] as string
                 });
             }
             return students;
@@ -46,7 +47,7 @@ namespace TeachAssist.DAL
         {
             using var connection = DbHelper.GetConnection();
 
-            var sql = @"select id, name, homecity, telephone, state from students
+            var sql = @"select id, name, homecity, telephone, state, duyin from students
                         where name like @name or homecity like @hc or id like @id";
             var command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@name", $"%{condition}%");
@@ -63,7 +64,8 @@ namespace TeachAssist.DAL
                     Name = reader["name"] as string,
                     Homecity = reader[2] as string,
                     Telephone = reader[3] as string,
-                    State = (int)reader[4]
+                    State = (int)reader[4],
+                    Duyin = reader[5] as string
                 });
             }
             return students;
@@ -73,7 +75,7 @@ namespace TeachAssist.DAL
         {
             using var connection = DbHelper.GetConnection();
 
-            var sql = @"select id, name, homecity, telephone, state from students where id=@id";
+            var sql = @"select id, name, homecity, telephone, state, duyin from students where id=@id";
             var command = new SqlCommand(sql, connection);
             command.Parameters.AddWithValue("@id", id);
 
@@ -86,7 +88,8 @@ namespace TeachAssist.DAL
                     Name = reader["name"] as string,
                     Homecity = reader[2] as string,
                     Telephone = reader[3] as string,
-                    State = (int)reader[4]
+                    State = (int)reader[4],
+                    Duyin = reader[5] as string
                 };
             }
             return null;
@@ -95,12 +98,13 @@ namespace TeachAssist.DAL
         public int AddStudent(Student student)
         {
             return DbHelper.DoExecuteNonQuery(
-                @"insert into students (id, name, homecity, telephone, state) values (@id, @name, @hc, @tel, @state)",
+                @"insert into students (id, name, homecity, telephone, state, duyin) values (@id, @name, @hc, @tel, @state, @duyin)",
                 new SqlParameter("@id", student.Id),
                 new SqlParameter("@name", student.Name),
                 new SqlParameter("@hc", student.Homecity),
                 new SqlParameter("@tel", student.Telephone),
-                new SqlParameter("@state", student.State)
+                new SqlParameter("@state", student.State),
+                new SqlParameter("@duyin", student.Duyin)
             );
         }
 
