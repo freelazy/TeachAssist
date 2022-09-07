@@ -111,11 +111,13 @@ namespace TeachAssist.DAL
         public int UpdateStudent(Student student)
         {
             return DbHelper.DoExecuteNonQuery(
-                @"update students set homecity=@hc, telephone=@tel, state=@state where id=@id",
+                @"update students set homecity=@hc, telephone=@tel, state=@state, duyin=@duyin where id=@id ",
                 new SqlParameter("id", student.Id),
                 new SqlParameter("hc", student.Homecity),
                 new SqlParameter("tel", student.Telephone),
-                new SqlParameter("state", student.State)
+                new SqlParameter("state", student.State),
+                new SqlParameter("duyin",student.Duyin)
+
             );
         }
 

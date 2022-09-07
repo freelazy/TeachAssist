@@ -88,6 +88,7 @@ namespace TeachAssist.Winform.Forms
                 tbHc.Text = Convert.ToString(cells[2].Value);
                 tbTel.Text = Convert.ToString(cells[3].Value);
                 tbState.Text = Convert.ToString(cells[4].Value);
+                txtPron.Text = Convert.ToString(cells[5].Value);
 
                 tbId.ReadOnly = true;
                 tbName.ReadOnly = true;
@@ -111,7 +112,8 @@ namespace TeachAssist.Winform.Forms
                         Name = tbName.Text,
                         Homecity = tbHc.Text,
                         Telephone = tbTel.Text,
-                        State = int.Parse(tbState.Text)
+                        State = int.Parse(tbState.Text),
+                        Duyin = txtPron.Text,
                     };
                     service.SaveAdd(s);
                     MessageBox.Show("添加成功");
@@ -138,6 +140,7 @@ namespace TeachAssist.Winform.Forms
                         Name = tbName.Text,
                         Homecity = tbHc.Text,
                         Telephone = tbTel.Text,
+                        Duyin = txtPron.Text,
                         State = int.Parse(tbState.Text)
                     });
                     MessageBox.Show("更新成功");

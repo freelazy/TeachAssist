@@ -128,23 +128,9 @@ namespace TeachAssist.Winform.Forms
             {
                 button.BackColor = doneColor;
             }
-            //var stu = button.Tag as Student;
-            if (button.Tag is Student stu)
-            {
-                var duyin = string.IsNullOrWhiteSpace(stu.Duyin) ? stu.Name : stu.Duyin;
-                CommonUtils.Speak("亲爱的" + duyin);
-                //if (/*stu.Duyin != null && */!string.IsNullOrWhiteSpace(stu.Duyin))
-                //{
-                //    CommonUtils.Speak(stu.Duyin);
-                //}
-                //else
-                //{
-                //    CommonUtils.Speak(button.Text);
-                //}
-            }
-            //sdfkjsdf
-            //ksjdfkjsdakfj
-            //ksjdfksjdf
+            var stu = button.Tag as Student;
+            var duyin = string.IsNullOrWhiteSpace(stu.Duyin) ? stu.Name : stu.Duyin;
+            CommonUtils.Speak(duyin);
         }
 
         /// <summary>

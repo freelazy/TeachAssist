@@ -51,6 +51,8 @@ namespace TeachAssist.Winform.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.dvStudents = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtPron = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -143,10 +145,12 @@ namespace TeachAssist.Winform.Forms
             // panelBottom
             // 
             this.panelBottom.Controls.Add(this.btSave);
+            this.panelBottom.Controls.Add(this.txtPron);
             this.panelBottom.Controls.Add(this.tbState);
             this.panelBottom.Controls.Add(this.tbHc);
             this.panelBottom.Controls.Add(this.tbTel);
             this.panelBottom.Controls.Add(this.tbName);
+            this.panelBottom.Controls.Add(this.label6);
             this.panelBottom.Controls.Add(this.tbId);
             this.panelBottom.Controls.Add(this.label5);
             this.panelBottom.Controls.Add(this.label4);
@@ -171,7 +175,7 @@ namespace TeachAssist.Winform.Forms
             // 
             // tbState
             // 
-            this.tbState.Location = new System.Drawing.Point(573, 30);
+            this.tbState.Location = new System.Drawing.Point(571, 79);
             this.tbState.Name = "tbState";
             this.tbState.Size = new System.Drawing.Size(127, 30);
             this.tbState.TabIndex = 5;
@@ -207,7 +211,7 @@ namespace TeachAssist.Winform.Forms
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(521, 30);
+            this.label5.Location = new System.Drawing.Point(519, 79);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 24);
             this.label5.TabIndex = 4;
@@ -276,6 +280,22 @@ namespace TeachAssist.Winform.Forms
             this.dvStudents.Size = new System.Drawing.Size(1006, 450);
             this.dvStudents.TabIndex = 0;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(519, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "读音";
+            // 
+            // txtPron
+            // 
+            this.txtPron.Location = new System.Drawing.Point(571, 24);
+            this.txtPron.Name = "txtPron";
+            this.txtPron.Size = new System.Drawing.Size(127, 30);
+            this.txtPron.TabIndex = 5;
+            // 
             // StudentManageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -321,5 +341,7 @@ namespace TeachAssist.Winform.Forms
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtPron;
+        private System.Windows.Forms.Label label6;
     }
 }
