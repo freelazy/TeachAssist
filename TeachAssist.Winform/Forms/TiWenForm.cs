@@ -27,6 +27,7 @@ namespace TeachAssist.Winform.Forms
             InitializeComponent();
 
             LoadStudents();
+            LoadGroups();
             InitGridViews();
 
             RefreshPickList();
@@ -49,10 +50,14 @@ namespace TeachAssist.Winform.Forms
         void InitGridViews()
         {
             dvStudents.Columns[0].Visible = false;
-            dvStudents.Columns[1].HeaderText = "名";
+            dvStudents.Columns[1].HeaderText = "姓名";
             dvStudents.Columns[2].HeaderText = "组";
             dvStudents.Columns[3].HeaderText = "次";
             dvStudents.Columns[4].HeaderText = "分";
+            dvStudents.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dvStudents.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvStudents.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvStudents.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dvStudents.RowHeadersWidth = 20;
             //dvStudents.RowTemplate.Height = 20;
             //dvStudents.ColumnHeadersHeight = 20;
@@ -66,10 +71,18 @@ namespace TeachAssist.Winform.Forms
             dvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
 
             dvGroups.Visible = false;
-            dvGroups.RowHeadersWidth = 20;
+            dvGroups.Columns[0].HeaderText = "No";
+            dvGroups.Columns[1].HeaderText = "组长";
+            dvGroups.Columns[2].HeaderText = "次";
+            dvGroups.Columns[3].HeaderText = "分";
+            dvGroups.Columns[4].Visible = false;
+            dvGroups.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvGroups.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            dvGroups.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvGroups.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dvGroups.RowHeadersWidth = 15;
             //dvGroups.RowTemplate.Height = 20;
             //dvGroups.ColumnHeadersHeight = 20;
-            dvGroups.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvGroups.BackgroundColor = Color.White;
             dvGroups.BorderStyle = BorderStyle.FixedSingle;
             dvGroups.AllowUserToAddRows = false;
@@ -98,18 +111,10 @@ namespace TeachAssist.Winform.Forms
             }
             else
             {
-                try
-                {
-                    var dv = students.AsDataView();
-                    dv.RowFilter = this.tbFilter.Text;
-                    dvStudents.DataSource = dv.ToTable();
-                    dvStudents.Refresh();
-                }
-                catch
-                {
-                    dvStudents.DataSource = students;
-                    dvStudents.Refresh();
-                }
+                var dv = students.AsDataView();
+                dv.RowFilter = $"name like '%{this.tbFilter.Text}%'";
+                dvStudents.DataSource = dv.ToTable();
+                dvStudents.Refresh();
             }
         }
 
@@ -259,6 +264,7 @@ namespace TeachAssist.Winform.Forms
         {
             this.pickIds = this.students.Select($"gno = {gno}")
                 .Cast<DataRow>()
+                .OrderBy(r => this.groups.Select($"stuid = '{r[0]}'").Count())
                 .Select(r => r[0].ToString())
                 .ToList();
             RefreshPickList();
@@ -362,6 +368,11 @@ namespace TeachAssist.Winform.Forms
             }
         }
 
+        private void btFilter_Click(object sender, EventArgs e)
+        {
+            FilterGridViews();
+        }
+
         private void btManual_Click(object sender, EventArgs e)
         {
             ManualPick();
@@ -385,6 +396,7 @@ namespace TeachAssist.Winform.Forms
 
         private void btMode_Click(object sender, EventArgs e)
         {
+            tbFilter.Text = "";
             isGroupMode = !isGroupMode;
 
             if (isGroupMode)
@@ -395,7 +407,7 @@ namespace TeachAssist.Winform.Forms
             else
             {
                 LoadStudents();
-                btMode.Text = "默认模式";
+                btMode.Text = "个人模式";
             }
 
             dvGroups.Visible = isGroupMode;

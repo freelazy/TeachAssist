@@ -14,7 +14,7 @@ namespace TeachAssist.DAL
 
         public DataTable AllGroups()
         {
-            var sql = @"select a.gno, b.name, c.cs, c.fs from groups a
+            var sql = @"select a.gno, b.name, c.cs, c.fs, a.stuid from groups a
                     left join students b on a.stuid = b.id
                     left join (select gno, SUM(tiwen_cishu) as cs, sum(tiwen_fenshu) as fs from students group by gno) c on a.gno = c.gno";
             return DbHelper.DoExecuteQuery(sql);

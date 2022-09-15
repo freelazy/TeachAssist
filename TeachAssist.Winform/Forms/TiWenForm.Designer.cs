@@ -41,6 +41,7 @@ namespace TeachAssist.Winform.Forms
             this.btRandom = new System.Windows.Forms.Button();
             this.lbName = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnFilter = new System.Windows.Forms.Button();
             this.lbInfo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dvStudents)).BeginInit();
@@ -62,7 +63,7 @@ namespace TeachAssist.Winform.Forms
             this.dvStudents.Name = "dvStudents";
             this.dvStudents.RowHeadersWidth = 62;
             this.dvStudents.RowTemplate.Height = 32;
-            this.dvStudents.Size = new System.Drawing.Size(322, 682);
+            this.dvStudents.Size = new System.Drawing.Size(321, 682);
             this.dvStudents.TabIndex = 0;
             // 
             // dvGroups
@@ -75,7 +76,7 @@ namespace TeachAssist.Winform.Forms
             this.dvGroups.Name = "dvGroups";
             this.dvGroups.RowHeadersWidth = 62;
             this.dvGroups.RowTemplate.Height = 32;
-            this.dvGroups.Size = new System.Drawing.Size(322, 682);
+            this.dvGroups.Size = new System.Drawing.Size(321, 682);
             this.dvGroups.TabIndex = 1;
             // 
             // btMode
@@ -83,9 +84,9 @@ namespace TeachAssist.Winform.Forms
             this.btMode.Location = new System.Drawing.Point(0, 47);
             this.btMode.Margin = new System.Windows.Forms.Padding(2);
             this.btMode.Name = "btMode";
-            this.btMode.Size = new System.Drawing.Size(174, 34);
+            this.btMode.Size = new System.Drawing.Size(177, 41);
             this.btMode.TabIndex = 1;
-            this.btMode.Text = "默认模式";
+            this.btMode.Text = "个人模式";
             this.btMode.UseVisualStyleBackColor = true;
             this.btMode.Click += new System.EventHandler(this.btMode_Click);
             // 
@@ -94,14 +95,14 @@ namespace TeachAssist.Winform.Forms
             this.tbFilter.Location = new System.Drawing.Point(0, 0);
             this.tbFilter.Margin = new System.Windows.Forms.Padding(2);
             this.tbFilter.Name = "tbFilter";
-            this.tbFilter.Size = new System.Drawing.Size(174, 30);
+            this.tbFilter.Size = new System.Drawing.Size(148, 30);
             this.tbFilter.TabIndex = 2;
             this.tbFilter.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbFilter_KeyUp);
             // 
             // pbAvatar
             // 
             this.pbAvatar.BackColor = System.Drawing.SystemColors.Control;
-            this.pbAvatar.Location = new System.Drawing.Point(371, 53);
+            this.pbAvatar.Location = new System.Drawing.Point(372, 53);
             this.pbAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.Size = new System.Drawing.Size(174, 188);
@@ -119,7 +120,7 @@ namespace TeachAssist.Winform.Forms
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(578, 188);
+            this.groupBox1.Size = new System.Drawing.Size(576, 188);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "候选人";
@@ -128,7 +129,7 @@ namespace TeachAssist.Winform.Forms
             // 
             this.pbClearList.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbClearList.Image = global::TeachAssist.Winform.Properties.Resources.Snipaste_2021_09_14_09_47_48;
-            this.pbClearList.Location = new System.Drawing.Point(-418, 2);
+            this.pbClearList.Location = new System.Drawing.Point(-420, 2);
             this.pbClearList.Margin = new System.Windows.Forms.Padding(2);
             this.pbClearList.Name = "pbClearList";
             this.pbClearList.Size = new System.Drawing.Size(18, 18);
@@ -145,7 +146,7 @@ namespace TeachAssist.Winform.Forms
             this.fpList.Margin = new System.Windows.Forms.Padding(2);
             this.fpList.Name = "fpList";
             this.fpList.Padding = new System.Windows.Forms.Padding(5);
-            this.fpList.Size = new System.Drawing.Size(574, 161);
+            this.fpList.Size = new System.Drawing.Size(572, 161);
             this.fpList.TabIndex = 0;
             // 
             // btManual
@@ -184,6 +185,7 @@ namespace TeachAssist.Winform.Forms
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel1.Controls.Add(this.btnFilter);
             this.panel1.Controls.Add(this.btMode);
             this.panel1.Controls.Add(this.tbFilter);
             this.panel1.Location = new System.Drawing.Point(375, 584);
@@ -192,11 +194,21 @@ namespace TeachAssist.Winform.Forms
             this.panel1.Size = new System.Drawing.Size(177, 90);
             this.panel1.TabIndex = 8;
             // 
+            // btnFilter
+            // 
+            this.btnFilter.Location = new System.Drawing.Point(153, 0);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.Size = new System.Drawing.Size(24, 30);
+            this.btnFilter.TabIndex = 3;
+            this.btnFilter.Text = "✓";
+            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Click += new System.EventHandler(this.btFilter_Click);
+            // 
             // lbInfo
             // 
             this.lbInfo.AutoSize = true;
             this.lbInfo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbInfo.Location = new System.Drawing.Point(581, 183);
+            this.lbInfo.Location = new System.Drawing.Point(581, 182);
             this.lbInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbInfo.Name = "lbInfo";
             this.lbInfo.Size = new System.Drawing.Size(110, 31);
@@ -259,5 +271,6 @@ namespace TeachAssist.Winform.Forms
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.DataGridView dvGroups;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnFilter;
     }
 }

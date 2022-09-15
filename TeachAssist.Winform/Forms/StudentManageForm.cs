@@ -45,9 +45,14 @@ namespace TeachAssist.Winform.Forms
         {
             this.dvStudents.AllowUserToAddRows = false;
             this.dvStudents.AllowUserToDeleteRows = false;
+            this.dvStudents.AllowUserToOrderColumns = true;
+            foreach (DataGridViewColumn column in dvStudents.Columns)
+            {
+                dvStudents.Columns[column.Name].SortMode = DataGridViewColumnSortMode.Automatic;
+            }
             this.dvStudents.EditMode = DataGridViewEditMode.EditProgrammatically;
 
-            this.Students = service.GetAllStudent();
+            this.Students = service.GetAllStudent().OrderBy(s => s.Name).ToList();
         }
 
         void InitInputForm()

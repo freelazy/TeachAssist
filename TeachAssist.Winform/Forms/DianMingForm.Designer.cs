@@ -71,10 +71,10 @@ namespace TeachAssist.Winform.Forms
             // 
             // refreshBt
             // 
-            this.refreshBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refreshBt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.refreshBt.BackColor = System.Drawing.Color.Transparent;
             this.refreshBt.Image = global::TeachAssist.Winform.Properties.Resources.Refresh;
-            this.refreshBt.Location = new System.Drawing.Point(855, 2);
+            this.refreshBt.Location = new System.Drawing.Point(887, 538);
             this.refreshBt.Margin = new System.Windows.Forms.Padding(2);
             this.refreshBt.Name = "refreshBt";
             this.refreshBt.Size = new System.Drawing.Size(17, 19);
@@ -85,7 +85,7 @@ namespace TeachAssist.Winform.Forms
             // 
             // btNext
             // 
-            this.btNext.Location = new System.Drawing.Point(287, 4);
+            this.btNext.Location = new System.Drawing.Point(317, 6);
             this.btNext.Margin = new System.Windows.Forms.Padding(4);
             this.btNext.Name = "btNext";
             this.btNext.Size = new System.Drawing.Size(122, 42);
@@ -95,7 +95,7 @@ namespace TeachAssist.Winform.Forms
             // 
             // btCurr
             // 
-            this.btCurr.Location = new System.Drawing.Point(145, 4);
+            this.btCurr.Location = new System.Drawing.Point(175, 6);
             this.btCurr.Margin = new System.Windows.Forms.Padding(4);
             this.btCurr.Name = "btCurr";
             this.btCurr.Size = new System.Drawing.Size(122, 42);
@@ -111,7 +111,7 @@ namespace TeachAssist.Winform.Forms
             this.btAuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btAuto.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btAuto.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btAuto.Location = new System.Drawing.Point(6, 4);
+            this.btAuto.Location = new System.Drawing.Point(36, 6);
             this.btAuto.Margin = new System.Windows.Forms.Padding(4);
             this.btAuto.Name = "btAuto";
             this.btAuto.Size = new System.Drawing.Size(122, 42);
@@ -125,10 +125,10 @@ namespace TeachAssist.Winform.Forms
             this.panel1.Controls.Add(this.btAuto);
             this.panel1.Controls.Add(this.btNext);
             this.panel1.Controls.Add(this.btCurr);
-            this.panel1.Location = new System.Drawing.Point(500, 571);
+            this.panel1.Location = new System.Drawing.Point(465, 571);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(413, 52);
+            this.panel1.Size = new System.Drawing.Size(448, 52);
             this.panel1.TabIndex = 23;
             // 
             // mingdan
@@ -147,7 +147,6 @@ namespace TeachAssist.Winform.Forms
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.refreshBt);
             this.panel2.Controls.Add(this.mingdan);
             this.panel2.Location = new System.Drawing.Point(28, 332);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -161,6 +160,7 @@ namespace TeachAssist.Winform.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 634);
+            this.Controls.Add(this.refreshBt);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.avatarBox);
