@@ -39,10 +39,12 @@ namespace TeachAssist.Winform.Forms
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.btSave = new System.Windows.Forms.Button();
+            this.txtPron = new System.Windows.Forms.TextBox();
             this.tbState = new System.Windows.Forms.TextBox();
             this.tbHc = new System.Windows.Forms.TextBox();
             this.tbTel = new System.Windows.Forms.TextBox();
             this.tbName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tbId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,8 +53,6 @@ namespace TeachAssist.Winform.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.dvStudents = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPron = new System.Windows.Forms.TextBox();
             this.panelTop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBottom.SuspendLayout();
@@ -173,6 +173,13 @@ namespace TeachAssist.Winform.Forms
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
+            // txtPron
+            // 
+            this.txtPron.Location = new System.Drawing.Point(571, 24);
+            this.txtPron.Name = "txtPron";
+            this.txtPron.Size = new System.Drawing.Size(127, 30);
+            this.txtPron.TabIndex = 5;
+            // 
             // tbState
             // 
             this.tbState.Location = new System.Drawing.Point(571, 79);
@@ -200,6 +207,15 @@ namespace TeachAssist.Winform.Forms
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(142, 30);
             this.tbName.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(519, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 24);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "读音";
             // 
             // tbId
             // 
@@ -279,22 +295,7 @@ namespace TeachAssist.Winform.Forms
             this.dvStudents.RowTemplate.Height = 32;
             this.dvStudents.Size = new System.Drawing.Size(1006, 450);
             this.dvStudents.TabIndex = 0;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(519, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 24);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "读音";
-            // 
-            // txtPron
-            // 
-            this.txtPron.Location = new System.Drawing.Point(571, 24);
-            this.txtPron.Name = "txtPron";
-            this.txtPron.Size = new System.Drawing.Size(127, 30);
-            this.txtPron.TabIndex = 5;
+            this.dvStudents.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dvStudents_RowPostPaint);
             // 
             // StudentManageForm
             // 

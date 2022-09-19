@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using TeachAssist.BLL;
@@ -200,6 +201,20 @@ namespace TeachAssist.Winform.Forms
                     .Where(s => s.State == int.Parse(item))
                     .ToList();
             }
+        }
+
+        /// <summary>
+        /// 显示行号
+        /// </summary>
+        private void dvStudents_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            var rectangle = new Rectangle(e.RowBounds.Location.X, e.RowBounds.Location.Y, dvStudents.RowHeadersWidth - 4, e.RowBounds.Height);
+            TextRenderer.DrawText(e.Graphics,
+                  (e.RowIndex + 1).ToString(),
+                   dvStudents.RowHeadersDefaultCellStyle.Font,
+                   rectangle,
+                   dvStudents.RowHeadersDefaultCellStyle.ForeColor,
+                   TextFormatFlags.VerticalCenter | TextFormatFlags.Right);
         }
     }
 }
